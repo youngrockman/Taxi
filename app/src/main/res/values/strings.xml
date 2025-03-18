@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Taxi</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Registration</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        prikol
+    </string>
+
+    <string name="user_info">User Info</string>
+    <string name="set_path">Set path</string>
+    <string name="call_taxi">Call Taxi</string>
+</resources>
