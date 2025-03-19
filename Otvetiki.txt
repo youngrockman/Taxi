@@ -1,0 +1,84 @@
+Как с помощью класса Toast создать всплывающее сообщение?
+
+Toast.makeText(context, "Сообщение", Toast.LENGTH_SHORT).show();.
+
+В каких случаях необходимо логирование?
+
+Для отладки, отслеживания ошибок, анализа работы приложения и мониторинга жизненного цикла компонентов.
+
+Что представляет собой окно LogCat? Какие существуют уровни логирования?
+
+LogCat — инструмент для просмотра логов в Android Studio. Уровни: Verbose, Debug, Info, Warn, Error.
+
+Как программно реализовать логирование?
+
+    Log.d("TAG", "Сообщение"); // Debug
+    Log.e("TAG", "Ошибка");    // Error
+
+Как создать новое Activity?
+
+    Java-класс, наследуемый от AppCompatActivity.
+
+    Создайте XML-файл макета в res/layout.
+
+    Зарегистрировать Activity в AndroidManifest.xml:
+    xml
+    Copy
+
+    <activity android:name=".NewActivity" />
+
+    
+
+Для чего используется контекст приложения Context?
+
+    Для доступа к ресурсам приложения, запуска компонентов (Activity, Service) и работы с системными сервисами.
+
+Для чего используются объекты класса Intent?
+
+    Для запуска Activity, Service, передачи данных между компонентами и выполнения неявных действий (например, открытие ссылки).
+
+Как выполнить явный вызов Activity?
+
+    Использовать Intent с указанием класса Activity:
+   
+
+    Intent intent = new Intent(this, SecondActivity.class);
+    startActivity(intent);
+
+Как выполнить неявный вызов Activity?
+
+    Использовать Intent с указанием действия (action) и категории (category):
+    
+
+    Intent intent = new Intent("com.example.ACTION_NAME");
+    intent.addCategory("android.intent.category.DEFAULT");
+    startActivity(intent);
+
+Какие состояния предусмотрены жизненным циклом Activity?
+
+   Created, Started, Resumed, Paused, Stopped, Destroyed.
+
+Какие методы автоматически срабатывают при смене состояния Activity? Как можно использовать эти методы?
+
+    onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy(). Используются для инициализации, освобождения ресурсов, сохранения данных.
+
+Как выполняется передача данных с помощью Intent?
+
+    Через putExtra():
+   
+
+    Intent intent = new Intent(this, SecondActivity.class);
+    intent.putExtra("key", "value");
+    startActivity(intent);
+
+    Получение данных в другой Activity:
+    
+    String value = getIntent().getStringExtra("key");
+
+В каком виде хранятся данные с помощью класса SharedPreferences?
+
+    В виде пар "ключ-значение" (key-value) в формате XML.
+
+В каких случаях целесообразно хранить данные с помощью класса SharedPreferences?
+
+    Для хранения небольших объемов данных (настройки, пользовательские предпочтения, токены).
